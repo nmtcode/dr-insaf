@@ -7,12 +7,9 @@ import {
   CssBaseline,
 } from "@mui/material";
 
-// 1. إنشاء السياق
 export const ThemeContext = createContext();
 
-// 2. مكون مزود السياق (Provider)
 export default function CustomThemeProvider({ children }) {
-  // تحديد ما إذا كان وضع الظلام مفضلاً في نظام التشغيل
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
   const [mode, setMode] = useState(prefersDarkMode ? "dark" : "light");
   const [language, setLanguage] = useState("ar");
@@ -24,58 +21,69 @@ export default function CustomThemeProvider({ children }) {
   const toggleLanguage = () => {
     setLanguage((prevLang) => (prevLang === "ar" ? "en" : "ar"));
   };
-  // 3. تهيئة الثيم باستخدام useMemo
+
   const theme = useMemo(
     () =>
       createTheme({
         direction: language === "ar" ? "rtl" : "ltr",
         palette: {
           mode,
-          // 🎨 تخصيص لوحة الألوان
           primary: {
-            // لون أساسي دافئ (مثل الأزرق الداكن أو البنفسجي)
-            main: mode === 'dark' ? '#BB86FC' : '#6200EE', // البنفسجي الغامق/الفاتح
+            // أزرق احترافي (Navy Blue) يعطي انطباع بالثقة والأمان
+            main: mode === 'dark' ? '#90caf9' : '#0a192f', 
           },
           secondary: {
-            // لون ثانوي متباين (للإبراز)
-            main: mode === 'dark' ? '#03DAC6' : '#018786', // الأخضر المائي
-          },
-          success: {
-            // فك التشفير (Decrypt)
-            main: '#4CAF50', // أخضر
-          },
-          warning: {
-            // عرض الجدول (Show Table)
-            main: '#FF9800', // برتقالي
-          },
-          error: {
-            // المسح (Clear)
-            main: '#F44336', // أحمر
+            // لون متباين (Cyan) للمسات البرمجية
+            main: mode === 'dark' ? '#64ffda' : '#00bfa5', 
           },
           background: {
-            // خلفية مخصصة
-            default: mode === 'dark' ? '#121212' : '#f5f5f5',
-            paper: mode === 'dark' ? '#1E1E1E' : '#ffffff',
+            // تدرجات الرمادي الداكن جداً بدلاً من الأسود الصريح
+            default: mode === 'dark' ? '#0a192f' : '#f8fafc',
+            paper: mode === 'dark' ? '#112240' : '#ffffff',
           },
+          // ألوان العمليات لتكون أقل حدة وأكثر تناسقاً
+          success: { main: '#2e7d32' },
+          warning: { main: '#ed6c02' },
+          error: { main: '#d32f2f' },
+          divider: mode === 'dark' ? 'rgba(255, 255, 255, 0.12)' : 'rgba(0, 0, 0, 0.08)',
         },
-        // ... (typography and components)
         typography: {
-          fontFamily:
-            language === "ar" ? "Cairo, sans-serif" : "Roboto, sans-serif",
+          // استخدام خط Tajawal أو Cairo للعربي يعطي فخامة أكثر
+          fontFamily: language === "ar" ? "'Cairo', sans-serif" : "'Inter', sans-serif",
+          h4: { fontWeight: 800 },
+          button: { fontWeight: 600, textTransform: 'none' }, // إلغاء الحروف الكبيرة التلقائية
         },
         components: {
-          // ... (MuiCssBaseline)
           MuiPaper: {
             styleOverrides: {
               root: {
-                borderRadius: '12px', // إضافة حواف مستديرة لعلبة الفورم
+                borderRadius: '16px', 
+                boxShadow: mode === 'dark' 
+                  ? '0 4px 20px 0 rgba(0,0,0,0.5)' 
+                  : '0 2px 12px 0 rgba(0,0,0,0.05)',
+                backgroundImage: 'none', // لإلغاء التدرج الافتراضي في الوضع الداكن
               },
             },
           },
           MuiButton: {
             styleOverrides: {
               root: {
-                borderRadius: '8px', // حواف مستديرة للأزرار
+                borderRadius: '10px',
+                padding: '10px 20px',
+                transition: 'all 0.2s ease-in-out',
+                '&:hover': {
+                  transform: 'translateY(-2px)', // حركة بسيطة عند التمرير
+                  boxShadow: '0 4px 8px rgba(0,0,0,0.15)',
+                },
+              },
+            },
+          },
+          MuiTextField: {
+            styleOverrides: {
+              root: {
+                '& .MuiOutlinedInput-root': {
+                  borderRadius: '12px',
+                },
               },
             },
           },
@@ -84,11 +92,8 @@ export default function CustomThemeProvider({ children }) {
     [mode, language]
   );
 
-  //
   return (
-    <ThemeContext.Provider
-      value={{ mode, language, toggleTheme, toggleLanguage }}
-    >
+    <ThemeContext.Provider value={{ mode, language, toggleTheme, toggleLanguage }}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         {children}

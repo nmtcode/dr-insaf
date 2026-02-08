@@ -6,8 +6,8 @@ export const AR_LABELS = {
   type: "نوع التشفير",
   caesarKeyNote: "المفتاح يجب أن يكون رقماً صحيحاً.",
   textKeyNote: "المفتاح النصي مطلوب.",
-  plain: "النص الواضح (Plain Text)",
-  cipher: "النص المشفر (Cipher Text)",
+  plain: "النص الواضح",
+  cipher: "النص المشفر",
   encrypt: "تشفير",
   decrypt: "فك التشفير",
   clear: "مسح",
@@ -17,12 +17,13 @@ export const AR_LABELS = {
   original: "الأصل",
   encrypted: "المشفر/القيمة",
   playfairTitle: "جدول بلاي فير (5x5)",
-  typeCaesar: "قيصر (Caesar)",
-  typePlayfair: "بلاي فير (Playfair)",
+  typeCaesar: "القيصر",
+  typePlayfair: "البلاي فير",
   typeMixed: "الأبجدية المختلطة",
   lineKeyNote: "أدخل عدد الأسطر (قيمة صحيحة موجبة ≥ 2).",
   lineKeyError: "يجب أن يكون المفتاح عدداً صحيحاً وموجباً (≥ 2) لعدد الأسطر.",
   noTableForRail: "طريقة سياج السكة الحديدية لا تعتمد على جدول إبدال ثابت.",
+  typehere: "اكتب النص هنا..."
 };
 
 export const EN_LABELS = {
@@ -53,6 +54,8 @@ export const EN_LABELS = {
     "The key must be a positive integer (≥ 2) for the number of rails.",
   noTableForRail:
     "The Rail Fence cipher method does not rely on a substitution table.",
+      typehere: "Type here...",
+
 };
 
 export const ENCRYPTION_TYPES = [
