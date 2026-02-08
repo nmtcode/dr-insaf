@@ -6,7 +6,7 @@ export const AR_LABELS = {
   type: "نوع التشفير",
   caesarKeyNote: "المفتاح يجب أن يكون رقماً صحيحاً.",
   textKeyNote: "المفتاح النصي مطلوب.",
-  plain: "النص الواضح",
+  plain: "النص الاصلي",
   cipher: "النص المشفر",
   encrypt: "تشفير",
   decrypt: "فك التشفير",
