@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# 🔐 Dr-Insaf: Cryptography Algorithms Tool
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern web-based tool built with React for encrypting and decrypting messages using classic cryptographic algorithms. This project provides an interactive interface to understand and apply historical encryption methods.
 
-## Available Scripts
+🔗 **Live Demo:** https://nmtcode-dr-insaf.vercel.app/
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Features
+The application supports four fundamental cryptographic algorithms:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Caesar Cipher (خوارزمية القيصر):** The classic substitution cipher based on shifting letters.
+2. **Playfair Cipher (خوارزمية بلاي فير):** A digram substitution cipher using a 5x5 matrix.
+3. **Row Transposition Cipher (تشفير الأسطر):** A transposition cipher that rearranges characters based on a key.
+4. **Mixed Alphabet Cipher (الأحرف المختلطة):** A substitution cipher using a randomized or keyed alphabet.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Tech Stack
+- **Framework:** React.js
+- **Styling:** CSS3 / Tailwind CSS (Mention if used)
+- **Deployment:** Vercel
+- **Logic:** JavaScript (Algorithms implementation)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🖥️ How it Works
+1. **Select Algorithm:** Choose one of the four available methods from the menu.
+2. **Input Text:** Enter the message you want to encrypt or decrypt.
+3. **Provide Key:** Enter the required key (Number for Caesar, Word for Playfair/Transposition).
+4. **Result:** Get the output instantly with a single click.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📂 Project Structure
+- `src/algorithms/` : Contains the JavaScript implementation for each cipher.
+- `src/components/` : UI components for inputs, buttons, and result displays.
+- `public/` : Static assets and icons.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📦 Local Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository:
+   git clone https://github.com/nmtcode/dr-insaf.git
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Install dependencies:
+   npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Run the project:
+   npm start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🎓 Academic Context
+This project was developed to demonstrate the practical application of cybersecurity and cryptography concepts, focusing on logic accuracy and user-friendly design.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## ☕ Support & Contact
+If you find this tool helpful, feel free to give it a ⭐!
 
-### Code Splitting
+- **Developer:** [Nawaf Al-Mawri](https://nmtcode.github.io/Nawaf_AlMawri/)
+- **GitHub:** [@NMTCODE](https://github.com/NMTCODE)
+- **LinkedIn:** [NMTCODE](https://linkedin.com/in/NMTCODE)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+<div align="center">
+  <p>Securing data with logic and ☕ by NMTCODE</p>
+</div>
